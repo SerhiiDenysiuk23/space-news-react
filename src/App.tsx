@@ -1,26 +1,41 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import NewsGrid from "./components/NewsGrid";
+import SearchBar from "./components/SearchBar";
+import {BrowserRouter, Route, Routes} from "react-router-dom";
+import NewsItemPage from "./components/NewsItemPage";
+// @ts-ignore
+import sprite from "./sprites.svg";
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    return (
+        <BrowserRouter>
+            <Routes>
+                <Route path={"/"} element={
+                    <>
+                        <section className={"container search-section"}>
+                            <h3>Filter by keywords</h3>
+                            <SearchBar/>
+                        </section>
+                        <section className={"container page_main"}>
+                            <h3>Results: <b>VAR</b></h3>
+                            <NewsGrid/>
+                        </section>
+                    </>
+                }/>
+
+                <Route path={"/news"} element={
+                    <>
+                        <div className={"news-item-page_background"}></div>
+                        <NewsItemPage/>
+                        <div className={"news-item-page_return"}>
+                            <svg><use href={sprite + "#arrow"}/></svg> Back to homepage
+                        </div>
+                    </>
+                }/>
+            </Routes>
+        </BrowserRouter>
+
+    );
 }
 
 export default App;
