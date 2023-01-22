@@ -1,7 +1,5 @@
 const apiUrl = "https://api.spaceflightnewsapi.net/v3/articles"
 
-type Params = "_limit" | "_start" | "=" | number
-
 export const requestDefaultArticleList = async (limit: string | number) => {
     const response = await fetch(`${apiUrl}?_limit=${limit}`);
     if (!response.ok)
