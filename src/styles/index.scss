@@ -32,10 +32,16 @@ img{
   object-fit: cover;
 }
 
-.photo-test{
-  width: 100%;
-  height: 100%;
-  background: red;
+a{
+  color: inherit;
+  text-decoration: none;
+}
+
+.calendar-icon{
+  width: 13.4px;
+  height: 13.4px;
+  fill: white;
+  opacity: .6;
 }
 
 @import "news";

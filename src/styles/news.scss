@@ -43,35 +43,6 @@
   gap: 3.123vw;
   margin-bottom: 63px;
 
-  &_card{
-    background: #FFFFFF;
-    border: 1px solid #EAEAEA;
-    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.05);
-    border-radius: 5px;
-  }
-
-  &_photo{
-    height: 217px;
-  }
-
-  &_content{
-    padding: 25px;
-  }
-  &_date{
-    font-size: 14px;
-    opacity: .7;
-    margin-bottom: 24px;
-    svg{
-      width: 13.4px;
-      height: 13.4px;
-      fill: white;
-      opacity: .6;
-    }
-  }
-  &_description{
-    line-height: 150%;
-    margin: 20px 0;
-  }
   &_read-more{
     font-weight: 700;
     svg{
